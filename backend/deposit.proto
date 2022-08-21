@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message DepositReq {
+    string address = 1;
+    string amount = 2;
+}
+
+message DepositRes {
+    string msg = 1;
+}
+
+message Empty {}
+
+
+service DepositService {
+    rpc deposit(DepositReq) returns (DepositRes) {}
+}
